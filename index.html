@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>CV – Oscar Rosiaux</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Optional: keep your CV out of search results -->
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="canonical" href="https://0skido.github.io/Oscar_Rosiaux_CV.pdf">
+
+  <!-- GA4: replace G-XXXXXXX with your Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+
+    function go(){
+      const url = 'Oscar_Rosiaux_CV.pdf';
+      let redirected = false;
+
+      // Send an explicit event before redirect
+      gtag('event', 'view_cv', {
+        event_callback: function(){
+          if (!redirected) { redirected = true; location.href = url; }
+        },
+        event_timeout: 800
+      });
+
+      // Hard fallback in case callback doesn’t fire
+      setTimeout(function(){ if (!redirected) location.href = url; }, 900);
+    }
+    window.addEventListener('load', go);
+  </script>
+
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial;
+         display:grid; place-items:center; min-height:100vh; margin:0}
+    .box{max-width:640px; padding:24px; text-align:center}
+    a{word-break:break-all}
+  </style>
+</head>
+<body>
+  <div class="box">
+    <p>Redirecting to the latest CV…</p>
+    <p>If nothing happens, <a href="Oscar_Rosiaux_CV.pdf">open the PDF</a>.</p>
+  </div>
+</body>
+</html>
